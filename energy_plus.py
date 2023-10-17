@@ -32,8 +32,15 @@ class EnergyPlusController:
         self._parse_input_file()
         self.runtime.run_energyplus(self.state, self.cmd_args)
             
-    
+
+    def _report_progress(self,progress: int) -> None:
+        if progress % 5  == 0:
+            print(f"Simulation progress: {progress}%")
+
+        
     def start(self):
+        self.runtime.callback_progress(self.state, self._report_progress) 
+        self.runtime.set_console_output_status(self.state, True)
         if self.energyplus_thread is None or not self.energyplus_thread.is_alive():
             self.energyplus_thread = threading.Thread(target=self._run_energyplus)
             self.energyplus_thread.start()
