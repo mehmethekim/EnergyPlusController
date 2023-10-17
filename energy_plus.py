@@ -1,12 +1,13 @@
 from pyenergyplus.api import EnergyPlusAPI
 from pyenergyplus.datatransfer import DataExchange
 from typing import Dict
+from queue import Queue
 import threading
 
 input_file_path = "input_files.txt"
 
 class EnergyPlusController:
-    def __init__(self) -> None:
+    def __init__(self,output_queue:Queue) -> None:
         self.api = EnergyPlusAPI()
         self.state = self.api.state_manager.new_state()
         self.runtime = self.api.runtime
@@ -16,6 +17,7 @@ class EnergyPlusController:
         self.example_file = ""
         self.energyplus_thread = None
         self.initialized = False
+        self.output_queue = output_queue
         #VARIABLES TO USE IN THE SIMULATION
         self.variables = {
                 
@@ -25,6 +27,7 @@ class EnergyPlusController:
         }
 
         self.var_handles: Dict[str, int] = {}
+    
     def _initialize_environment(self):
         if self.initialized:
             return True
@@ -60,12 +63,21 @@ class EnergyPlusController:
     def _report_progress(self,progress: int) -> None:
         if progress % 5  == 0:
             print(f"Simulation progress: {progress}%")
-
+    def _parse_output(self):
+        pass
     def _collect_output(self,_state):
         #self.data_exchange.process_outputs(self.state)
         if not self._initialize_environment():
             return
-        
+        self.next_output = {
+            **{
+                key: self.data_exchange.get_variable_value(self.state, handle)
+                for key, handle
+                in self.var_handles.items()
+            }
+        }
+        print(self.next_output)
+        self.output_queue.put(self.next_output)
     def start(self):
         self.runtime.callback_progress(self.state, self._report_progress)
         # register callback used to collect observations
@@ -81,5 +93,6 @@ class EnergyPlusController:
         if self.energyplus_thread and self.energyplus_thread.is_alive():
             self.energyplus_thread.join()  # Wait for the thread to finish
             print("EnergyPlus stopped")
+
         else:
             print("EnergyPlus is not running")
