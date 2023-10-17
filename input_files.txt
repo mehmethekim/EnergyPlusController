@@ -1,0 +1,2 @@
+/usr/local/EnergyPlus-23-1-0/WeatherData/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw
+/usr/local/EnergyPlus-23-1-0/ExampleFiles/FanCoilAutoSize.idf
