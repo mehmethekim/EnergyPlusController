@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 
-#Every file inside sim_output
-sim_output/*
+#Every file inside sim_output but not itself
+sim_output/**/*
