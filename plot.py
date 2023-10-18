@@ -29,7 +29,7 @@ def plot_energy_data(output_queue:Queue):
     # Create the line graph
     plt.plot(timestamps, zone_mean_temp, label='Zone Mean Temp')
     plt.plot(timestamps, site_outdoor_temp, label='Site Outdoor Temp')
-    plt.plot(timestamps, site_sky_cover, label='Site Sky Cover')
+    #plt.plot(timestamps, site_sky_cover, label='Site Sky Cover')
 
     plt.xlabel("Time")
     plt.ylabel("Values")

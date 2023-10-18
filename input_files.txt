@@ -1,2 +1,2 @@
-/usr/local/EnergyPlus-23-1-0/WeatherData/USA_FL_Tampa.Intl.AP.722110_TMY3.epw
-/usr/local/EnergyPlus-23-1-0/ExampleFiles/1ZoneUncontrolled.idf
+/usr/local/EnergyPlus-23-1-0/WeatherData/USA_CA_San.Francisco.Intl.AP.724940_TMY3.epw
+/usr/local/EnergyPlus-23-1-0/ExampleFiles/2ZoneDataCenterHVAC_wEconomizer.idf

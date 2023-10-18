@@ -3,6 +3,8 @@ from pyenergyplus.datatransfer import DataExchange
 from typing import Dict
 from queue import Queue
 import threading
+import csv
+
 
 input_file_path = "input_files.txt"
 
@@ -30,15 +32,25 @@ class EnergyPlusController:
         self.energyplus_thread = None
         self.initialized = False
         self.output_queue = output_queue
+        self.action_queue = Queue()
+        self.next_output = None
         #VARIABLES TO USE IN THE SIMULATION
         self.variables = {
-                
-                "zone_mean_temp": ("Zone Mean Air Temperature","ZONE ONE" ),
+                "zone_mean_temp": ("Zone Air Temperature","WEST ZONE" ),
                 "site_outdoor_temp": ("Site Outdoor Air Drybulb Temperature","Environment"  ),
-                "site_sky_cover": ("Site Total Sky Cover" ,"Environment" ),
+                #"site_sky_cover": ("Site Total Sky Cover" ,"Environment" ),
         }
 
         self.var_handles: Dict[str, int] = {}
+
+        self.actuators = {
+            # supply air temperature setpoint (°C)
+            "heating_setpoint": ("Zone Temperature Control","Heating Setpoint","WEST ZONE" ),
+            "cooling_setpoint": ("Zone Temperature Control","Cooling Setpoint","WEST ZONE" ),
+            
+
+        }
+        self.actuator_handles: Dict[str, int] = {}
     """
         Initialize the EnergyPlus environment.
 
@@ -55,11 +67,35 @@ class EnergyPlusController:
             return True
         if self.data_exchange.warmup_flag(self.state):
             return False
+        my_list = self.data_exchange.list_available_api_data_csv(self.state)
+        # Specify the file path where you want to save the CSV file
+        file_path = "data.csv"
+
+        # Decode the bytes to a string assuming it's in UTF-8 encoding
+        data_string = my_list.decode('utf-8')
+
+        # Split the string into lines (assuming it's CSV data with line breaks)
+        lines = data_string.split('\n')
+
+        # Use a context manager to open the file for writing
+        with open(file_path, mode='w', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+
+            # Write each line as a CSV row
+            for line in lines:
+                row = line.split(',')
+                csv_writer.writerow(row)
+
+        print(f"CSV file '{file_path}' has been created.")
         self.var_handles = {
                 key: self.data_exchange.get_variable_handle(self.state, *var)
                 for key, var in self.variables.items()
             }
-        print(self.var_handles)
+        self.actuator_handles = {
+                key: self.data_exchange.get_actuator_handle(self.state, *act)
+                for key, act in self.actuators.items()
+            }
+        print(self.actuator_handles)
         self.initialized =True
         return True
     """
@@ -133,8 +169,51 @@ class EnergyPlusController:
                 in self.var_handles.items()
             }
         }
-        print(self.next_output)
+        #print(self.next_output)
         self.output_queue.put(self.next_output)
+    def _send_actions(self,_):
+        if not self._initialize_environment():
+            return
+
+        # if self.action_queue.empty():
+        #     return
+
+        # next_action = self.action_queue.get()
+        # assert isinstance(next_action, float)
+        # set the actuator value
+        #look at the front of the output queue, if it is higher than 27 degrees, turn on the high temp actuator
+        #if it is lower than 23 degrees, turn on the low temp actuator
+        if self.next_output is None:
+            return
+        self.data_exchange.set_actuator_value(
+                state=self.state,
+                actuator_handle=self.actuator_handles["heating_setpoint"],
+                actuator_value=18.0
+            )
+        self.data_exchange.set_actuator_value(
+                state=self.state,
+                actuator_handle=self.actuator_handles["cooling_setpoint"],
+                actuator_value=27.0
+            )
+        if self.next_output["zone_mean_temp"] > 27:
+            # print(self.data_exchange.get_actuator_value(state=self.state,
+            #     actuator_handle=self.actuator_handles["set_point"]))
+            # self.data_exchange.set_actuator_value(
+            #     state=self.state,
+            #     actuator_handle=self.actuator_handles["cooling_setpoint"],
+            #     actuator_value=18.0
+            # )
+            pass
+        elif self.next_output["zone_mean_temp"] < 21:
+            # print(self.data_exchange.get_actuator_value(state=self.state,
+            #     actuator_handle=self.actuator_handles["set_point"]))
+            # self.data_exchange.set_actuator_value(
+            #     state=self.state,
+            #     actuator_handle=self.actuator_handles["heating_setpoint"],
+            #     actuator_value=27.0
+            # )
+            pass
+
     """
         Start the EnergyPlus simulation.
 
@@ -148,6 +227,8 @@ class EnergyPlusController:
         self.runtime.callback_progress(self.state, self._report_progress)
         # register callback used to collect observations
         self.runtime.callback_end_zone_timestep_after_zone_reporting(self.state, self._collect_output)
+        # register callback used to send actions
+        self.runtime.callback_after_predictor_after_hvac_managers(self.state, self._send_actions)
  
         self.runtime.set_console_output_status(self.state, False)
         if self.energyplus_thread is None or not self.energyplus_thread.is_alive():

@@ -1,0 +1,508 @@
+**ACTUATORS**
+Actuator,Weather Data,Outdoor Dry Bulb,Environment;
+Actuator,Weather Data,Outdoor Dew Point,Environment;
+Actuator,Weather Data,Outdoor Relative Humidity,Environment;
+Actuator,Weather Data,Diffuse Solar,Environment;
+Actuator,Weather Data,Direct Solar,Environment;
+Actuator,Weather Data,Wind Speed,Environment;
+Actuator,Weather Data,Wind Direction,Environment;
+Actuator,Schedule:Compact,Schedule Value,OAFRACTIONSCHED;
+Actuator,Schedule:Compact,Schedule Value,CW LOOP TEMP SCHEDULE;
+Actuator,Schedule:Compact,Schedule Value,CHILLER ALWAYSONSCHEDULE;
+Actuator,Schedule:Compact,Schedule Value,LOAD PROFILE FLOW FRAC SCHEDULE;
+Actuator,Schedule:Compact,Schedule Value,TOWER ALWAYSONSCHEDULE;
+Actuator,Schedule:Compact,Schedule Value,OFFICE OCCUPANCY;
+Actuator,Schedule:Compact,Schedule Value,ACTIVITY SCH;
+Actuator,Schedule:Compact,Schedule Value,WORK EFF SCH;
+Actuator,Schedule:Compact,Schedule Value,CLOTHING SCH;
+Actuator,Schedule:Compact,Schedule Value,AIR VELO SCH;
+Actuator,Schedule:Compact,Schedule Value,BLDG_EQUIP_SCH;
+Actuator,Schedule:Compact,Schedule Value,DATA CENTER CPU LOADING SCHEDULE;
+Actuator,Schedule:Compact,Schedule Value,LIGHTS-1;
+Actuator,Schedule:Compact,Schedule Value,ZONE CONTROL TYPE SCHED;
+Actuator,Schedule:Compact,Schedule Value,HEATING SETPOINTS;
+Actuator,Schedule:Compact,Schedule Value,COOLING SETPOINTS;
+Actuator,Schedule:Compact,Schedule Value,ALWAYS_ON;
+Actuator,Schedule:Compact,Schedule Value,FANANDCOILAVAILSCHED;
+Actuator,Schedule:Compact,Schedule Value,WESTCHWATERCOILAVAILSCHED;
+Actuator,Schedule:Compact,Schedule Value,WESTDXCCOILAVAILSCHED;
+Actuator,Schedule:Compact,Schedule Value,EASTCHWATERCOILAVAILSCHED;
+Actuator,Schedule:Compact,Schedule Value,EASTDXCCOILAVAILSCHED;
+Actuator,Schedule:Constant,Schedule Value,DATA CENTER OPERATION SCHEDULE;
+Actuator,Material,Surface Property Solar Absorptance,C5 - 4 IN HW CONCRETE;
+Actuator,Material,Surface Property Thermal Absorptance,C5 - 4 IN HW CONCRETE;
+Actuator,Material,Surface Property Visible Absorptance,C5 - 4 IN HW CONCRETE;
+Actuator,Material,Surface Property Solar Absorptance,1IN STUCCO;
+Actuator,Material,Surface Property Thermal Absorptance,1IN STUCCO;
+Actuator,Material,Surface Property Visible Absorptance,1IN STUCCO;
+Actuator,Material,Surface Property Solar Absorptance,8IN CONCRETE HW;
+Actuator,Material,Surface Property Thermal Absorptance,8IN CONCRETE HW;
+Actuator,Material,Surface Property Visible Absorptance,8IN CONCRETE HW;
+Actuator,Material,Surface Property Solar Absorptance,WALL INSULATION [5];
+Actuator,Material,Surface Property Thermal Absorptance,WALL INSULATION [5];
+Actuator,Material,Surface Property Visible Absorptance,WALL INSULATION [5];
+Actuator,Material,Surface Property Solar Absorptance,1/2IN GYPSUM;
+Actuator,Material,Surface Property Thermal Absorptance,1/2IN GYPSUM;
+Actuator,Material,Surface Property Visible Absorptance,1/2IN GYPSUM;
+Actuator,Material,Surface Property Solar Absorptance,C19 - 2 IN LIGHT WEIGHT CONCRETE;
+Actuator,Material,Surface Property Thermal Absorptance,C19 - 2 IN LIGHT WEIGHT CONCRETE;
+Actuator,Material,Surface Property Visible Absorptance,C19 - 2 IN LIGHT WEIGHT CONCRETE;
+Actuator,Material,Surface Property Solar Absorptance,E1 - 3 / 4 IN PLASTER OR GYP BOARD;
+Actuator,Material,Surface Property Thermal Absorptance,E1 - 3 / 4 IN PLASTER OR GYP BOARD;
+Actuator,Material,Surface Property Visible Absorptance,E1 - 3 / 4 IN PLASTER OR GYP BOARD;
+Actuator,Material,Surface Property Solar Absorptance,C6 - 8 IN CLAY TILE;
+Actuator,Material,Surface Property Thermal Absorptance,C6 - 8 IN CLAY TILE;
+Actuator,Material,Surface Property Visible Absorptance,C6 - 8 IN CLAY TILE;
+Actuator,Material,Surface Property Solar Absorptance,R19LAYER;
+Actuator,Material,Surface Property Thermal Absorptance,R19LAYER;
+Actuator,Material,Surface Property Visible Absorptance,R19LAYER;
+Actuator,People,Number of People,WEST ZONE PEOPLE;
+Actuator,People,Number of People,EAST ZONE PEOPLE;
+Actuator,Lights,Electricity Rate,WEST ZONE LIGHTS;
+Actuator,Lights,Electricity Rate,EAST ZONE LIGHTS;
+Actuator,ElectricEquipment,Electricity Rate,WEST ZONE_MISCPLUG_EQUIP;
+Actuator,ElectricEquipment,Electricity Rate,EAST ZONE_MISCPLUG_EQUIP;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:WALL001W;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:WALL001W;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:WALL003W;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:WALL003W;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:WALL004;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:WALL004;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:PARTITON001;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:PARTITON001;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:FLR001W;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:FLR001W;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:ROOF001W;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:ROOF001W;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:WALL001E;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:WALL001E;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:WALL002;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:WALL002;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:WALL003E;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:WALL003E;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN002:PARTITON001;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN002:PARTITON001;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:FLR001E;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:FLR001E;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,ZN001:ROOF001E;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,ZN001:ROOF001E;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:WALL001W;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:WALL001W;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:WALL003W;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:WALL003W;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:WALL004;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:WALL004;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:PARTITON001;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:PARTITON001;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:FLR001W;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:FLR001W;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:CEILINGW;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:CEILINGW;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:WALL001E;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:WALL001E;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:WALL002;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:WALL002;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:WALL003E;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:WALL003E;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN002:PARTITON001;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN002:PARTITON001;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:FLR001E;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:FLR001E;
+Actuator,Surface,Interior Surface Convection Heat Transfer Coefficient,PZN001:CEILINGE;
+Actuator,Surface,Exterior Surface Convection Heat Transfer Coefficient,PZN001:CEILINGE;
+Actuator,Surface,Construction State,ZN001:WALL001W;
+Actuator,Surface,Construction State,ZN001:WALL003W;
+Actuator,Surface,Construction State,ZN001:WALL004;
+Actuator,Surface,Construction State,ZN001:PARTITON001;
+Actuator,Surface,Construction State,ZN001:FLR001W;
+Actuator,Surface,Construction State,ZN001:ROOF001W;
+Actuator,Surface,Construction State,ZN001:WALL001E;
+Actuator,Surface,Construction State,ZN001:WALL002;
+Actuator,Surface,Construction State,ZN001:WALL003E;
+Actuator,Surface,Construction State,ZN002:PARTITON001;
+Actuator,Surface,Construction State,ZN001:FLR001E;
+Actuator,Surface,Construction State,ZN001:ROOF001E;
+Actuator,Surface,Construction State,PZN001:WALL001W;
+Actuator,Surface,Construction State,PZN001:WALL003W;
+Actuator,Surface,Construction State,PZN001:WALL004;
+Actuator,Surface,Construction State,PZN001:PARTITON001;
+Actuator,Surface,Construction State,PZN001:FLR001W;
+Actuator,Surface,Construction State,PZN001:CEILINGW;
+Actuator,Surface,Construction State,PZN001:WALL001E;
+Actuator,Surface,Construction State,PZN001:WALL002;
+Actuator,Surface,Construction State,PZN001:WALL003E;
+Actuator,Surface,Construction State,PZN002:PARTITON001;
+Actuator,Surface,Construction State,PZN001:FLR001E;
+Actuator,Surface,Construction State,PZN001:CEILINGE;
+Actuator,Surface,View Factor To Ground,ZN001:WALL001W;
+Actuator,Surface,Outdoor Air Drybulb Temperature,ZN001:WALL001W;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,ZN001:WALL001W;
+Actuator,Surface,Outdoor Air Wind Speed,ZN001:WALL001W;
+Actuator,Surface,Outdoor Air Wind Direction,ZN001:WALL001W;
+Actuator,Surface,View Factor To Ground,ZN001:WALL003W;
+Actuator,Surface,Outdoor Air Drybulb Temperature,ZN001:WALL003W;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,ZN001:WALL003W;
+Actuator,Surface,Outdoor Air Wind Speed,ZN001:WALL003W;
+Actuator,Surface,Outdoor Air Wind Direction,ZN001:WALL003W;
+Actuator,Surface,View Factor To Ground,ZN001:WALL004;
+Actuator,Surface,Outdoor Air Drybulb Temperature,ZN001:WALL004;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,ZN001:WALL004;
+Actuator,Surface,Outdoor Air Wind Speed,ZN001:WALL004;
+Actuator,Surface,Outdoor Air Wind Direction,ZN001:WALL004;
+Actuator,Surface,View Factor To Ground,ZN001:ROOF001W;
+Actuator,Surface,Outdoor Air Drybulb Temperature,ZN001:ROOF001W;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,ZN001:ROOF001W;
+Actuator,Surface,Outdoor Air Wind Speed,ZN001:ROOF001W;
+Actuator,Surface,Outdoor Air Wind Direction,ZN001:ROOF001W;
+Actuator,Surface,View Factor To Ground,ZN001:WALL001E;
+Actuator,Surface,Outdoor Air Drybulb Temperature,ZN001:WALL001E;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,ZN001:WALL001E;
+Actuator,Surface,Outdoor Air Wind Speed,ZN001:WALL001E;
+Actuator,Surface,Outdoor Air Wind Direction,ZN001:WALL001E;
+Actuator,Surface,View Factor To Ground,ZN001:WALL002;
+Actuator,Surface,Outdoor Air Drybulb Temperature,ZN001:WALL002;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,ZN001:WALL002;
+Actuator,Surface,Outdoor Air Wind Speed,ZN001:WALL002;
+Actuator,Surface,Outdoor Air Wind Direction,ZN001:WALL002;
+Actuator,Surface,View Factor To Ground,ZN001:WALL003E;
+Actuator,Surface,Outdoor Air Drybulb Temperature,ZN001:WALL003E;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,ZN001:WALL003E;
+Actuator,Surface,Outdoor Air Wind Speed,ZN001:WALL003E;
+Actuator,Surface,Outdoor Air Wind Direction,ZN001:WALL003E;
+Actuator,Surface,View Factor To Ground,ZN001:ROOF001E;
+Actuator,Surface,Outdoor Air Drybulb Temperature,ZN001:ROOF001E;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,ZN001:ROOF001E;
+Actuator,Surface,Outdoor Air Wind Speed,ZN001:ROOF001E;
+Actuator,Surface,Outdoor Air Wind Direction,ZN001:ROOF001E;
+Actuator,Surface,View Factor To Ground,PZN001:WALL001W;
+Actuator,Surface,Outdoor Air Drybulb Temperature,PZN001:WALL001W;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,PZN001:WALL001W;
+Actuator,Surface,Outdoor Air Wind Speed,PZN001:WALL001W;
+Actuator,Surface,Outdoor Air Wind Direction,PZN001:WALL001W;
+Actuator,Surface,View Factor To Ground,PZN001:WALL003W;
+Actuator,Surface,Outdoor Air Drybulb Temperature,PZN001:WALL003W;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,PZN001:WALL003W;
+Actuator,Surface,Outdoor Air Wind Speed,PZN001:WALL003W;
+Actuator,Surface,Outdoor Air Wind Direction,PZN001:WALL003W;
+Actuator,Surface,View Factor To Ground,PZN001:WALL004;
+Actuator,Surface,Outdoor Air Drybulb Temperature,PZN001:WALL004;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,PZN001:WALL004;
+Actuator,Surface,Outdoor Air Wind Speed,PZN001:WALL004;
+Actuator,Surface,Outdoor Air Wind Direction,PZN001:WALL004;
+Actuator,Surface,View Factor To Ground,PZN001:WALL001E;
+Actuator,Surface,Outdoor Air Drybulb Temperature,PZN001:WALL001E;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,PZN001:WALL001E;
+Actuator,Surface,Outdoor Air Wind Speed,PZN001:WALL001E;
+Actuator,Surface,Outdoor Air Wind Direction,PZN001:WALL001E;
+Actuator,Surface,View Factor To Ground,PZN001:WALL002;
+Actuator,Surface,Outdoor Air Drybulb Temperature,PZN001:WALL002;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,PZN001:WALL002;
+Actuator,Surface,Outdoor Air Wind Speed,PZN001:WALL002;
+Actuator,Surface,Outdoor Air Wind Direction,PZN001:WALL002;
+Actuator,Surface,View Factor To Ground,PZN001:WALL003E;
+Actuator,Surface,Outdoor Air Drybulb Temperature,PZN001:WALL003E;
+Actuator,Surface,Outdoor Air Wetbulb Temperature,PZN001:WALL003E;
+Actuator,Surface,Outdoor Air Wind Speed,PZN001:WALL003E;
+Actuator,Surface,Outdoor Air Wind Direction,PZN001:WALL003E;
+Actuator,Zone,Outdoor Air Drybulb Temperature,WEST ZONE;
+Actuator,Zone,Outdoor Air Wetbulb Temperature,WEST ZONE;
+Actuator,Zone,Outdoor Air Wind Speed,WEST ZONE;
+Actuator,Zone,Outdoor Air Wind Direction,WEST ZONE;
+Actuator,Zone,Outdoor Air Drybulb Temperature,EAST ZONE;
+Actuator,Zone,Outdoor Air Wetbulb Temperature,EAST ZONE;
+Actuator,Zone,Outdoor Air Wind Speed,EAST ZONE;
+Actuator,Zone,Outdoor Air Wind Direction,EAST ZONE;
+Actuator,Zone,Outdoor Air Drybulb Temperature,WEST PLENUM;
+Actuator,Zone,Outdoor Air Wetbulb Temperature,WEST PLENUM;
+Actuator,Zone,Outdoor Air Wind Speed,WEST PLENUM;
+Actuator,Zone,Outdoor Air Wind Direction,WEST PLENUM;
+Actuator,Zone,Outdoor Air Drybulb Temperature,EAST PLENUM;
+Actuator,Zone,Outdoor Air Wetbulb Temperature,EAST PLENUM;
+Actuator,Zone,Outdoor Air Wind Speed,EAST PLENUM;
+Actuator,Zone,Outdoor Air Wind Direction,EAST PLENUM;
+Actuator,Plant Loop Overall,On/Off Supervisory,CHILLED WATER LOOP;
+Actuator,Supply Side Half Loop,On/Off Supervisory,CHILLED WATER LOOP;
+Actuator,Demand Side Half Loop,On/Off Supervisory,CHILLED WATER LOOP;
+Actuator,Demand Side Branch,On/Off Supervisory,CW DEMAND INLET BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CW DEMAND SIDE INLET PIPE;
+Actuator,Demand Side Branch,On/Off Supervisory,WEST CW COOLING COIL BRANCH;
+Actuator,Plant Component Coil:Cooling:Water,On/Off Supervisory,WEST ZONE CW COOLING COIL;
+Actuator,Demand Side Branch,On/Off Supervisory,EAST CW COOLING COIL BRANCH;
+Actuator,Plant Component Coil:Cooling:Water,On/Off Supervisory,EAST ZONE CW COOLING COIL;
+Actuator,Demand Side Branch,On/Off Supervisory,CW DEMAND BYPASS BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CW DEMAND SIDE BYPASS PIPE;
+Actuator,Demand Side Branch,On/Off Supervisory,CW DEMAND OUTLET BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CW DEMAND SIDE OUTLET PIPE;
+Actuator,Supply Side Branch,On/Off Supervisory,CW SUPPLY PUMP BRANCH;
+Actuator,Plant Component Pump:VariableSpeed,On/Off Supervisory,CW CIRC PUMP;
+Actuator,Supply Side Branch,On/Off Supervisory,CW SUPPLY CHILLER BRANCH;
+Actuator,Plant Component Chiller:Electric,On/Off Supervisory,CHILLER;
+Actuator,Supply Side Branch,On/Off Supervisory,CW SUPPLY BYPASS BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CW SUPPLY SIDE BYPASS PIPE;
+Actuator,Supply Side Branch,On/Off Supervisory,CW SUPPLY OUTLET BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CW SUPPLY SIDE OUTLET PIPE;
+Actuator,Plant Loop Overall,On/Off Supervisory,CONDENSER LOOP;
+Actuator,Supply Side Half Loop,On/Off Supervisory,CONDENSER LOOP;
+Actuator,Demand Side Half Loop,On/Off Supervisory,CONDENSER LOOP;
+Actuator,Demand Side Branch,On/Off Supervisory,CONDENSER DEMAND INLET BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CONDENSER DEMAND INLET PIPE;
+Actuator,Demand Side Branch,On/Off Supervisory,CONDENSER DEMAND BYPASS BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CONDENSER DEMAND BYPASS PIPE;
+Actuator,Demand Side Branch,On/Off Supervisory,CONDENSER DEMAND CHILLER BRANCH;
+Actuator,Demand Side Branch,On/Off Supervisory,CONDENSER DEMAND OUTLET BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CONDENSER DEMAND OUTLET PIPE;
+Actuator,Supply Side Branch,On/Off Supervisory,CONDENSER SUPPLY PUMP BRANCH;
+Actuator,Plant Component Pump:VariableSpeed,On/Off Supervisory,COND CIRC PUMP;
+Actuator,Supply Side Branch,On/Off Supervisory,CONDENSER SUPPLY TOWER BRANCH;
+Actuator,Plant Component CoolingTower:VariableSpeed,On/Off Supervisory,COOLING TOWER;
+Actuator,Supply Side Branch,On/Off Supervisory,CONDENSER SUPPLY BYPASS BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CONDENSER SUPPLY BYPASS PIPE;
+Actuator,Supply Side Branch,On/Off Supervisory,CONDENSER SUPPLY OUTLET BRANCH;
+Actuator,Plant Component Pipe:Adiabatic,On/Off Supervisory,CONDENSER SUPPLY OUTLET PIPE;
+Actuator,Sizing:Zone,Zone Design Heating Air Mass Flow Rate,WEST ZONE;
+Actuator,Sizing:Zone,Zone Design Cooling Air Mass Flow Rate,WEST ZONE;
+Actuator,Sizing:Zone,Zone Design Heating Load,WEST ZONE;
+Actuator,Sizing:Zone,Zone Design Cooling Load,WEST ZONE;
+Actuator,Sizing:Zone,Zone Design Heating Vol Flow,WEST ZONE;
+Actuator,Sizing:Zone,Zone Design Cooling Vol Flow,WEST ZONE;
+Actuator,Sizing:Zone,Zone Design Heating Air Mass Flow Rate,EAST ZONE;
+Actuator,Sizing:Zone,Zone Design Cooling Air Mass Flow Rate,EAST ZONE;
+Actuator,Sizing:Zone,Zone Design Heating Load,EAST ZONE;
+Actuator,Sizing:Zone,Zone Design Cooling Load,EAST ZONE;
+Actuator,Sizing:Zone,Zone Design Heating Vol Flow,EAST ZONE;
+Actuator,Sizing:Zone,Zone Design Cooling Vol Flow,EAST ZONE;
+Actuator,Zone Temperature Control,Heating Setpoint,WEST ZONE;
+Actuator,Zone Temperature Control,Cooling Setpoint,WEST ZONE;
+Actuator,Zone Temperature Control,Heating Setpoint,EAST ZONE;
+Actuator,Zone Temperature Control,Cooling Setpoint,EAST ZONE;
+**INTERNAL_VARIABLES**
+InternalVariable,Plant Design Volume Flow Rate,CHILLED WATER LOOP
+InternalVariable,Plant Design Volume Flow Rate,CONDENSER LOOP
+InternalVariable,People Count Design Level,WEST ZONE PEOPLE
+InternalVariable,People Count Design Level,EAST ZONE PEOPLE
+InternalVariable,Lighting Power Design Level,WEST ZONE LIGHTS
+InternalVariable,Lighting Power Design Level,EAST ZONE LIGHTS
+InternalVariable,Plug and Process Power Design Level,WEST ZONE_MISCPLUG_EQUIP
+InternalVariable,Plug and Process Power Design Level,EAST ZONE_MISCPLUG_EQUIP
+InternalVariable,Zone Floor Area,WEST ZONE
+InternalVariable,Zone Air Volume,WEST ZONE
+InternalVariable,Zone Multiplier,WEST ZONE
+InternalVariable,Zone List Multiplier,WEST ZONE
+InternalVariable,Zone Floor Area,EAST ZONE
+InternalVariable,Zone Air Volume,EAST ZONE
+InternalVariable,Zone Multiplier,EAST ZONE
+InternalVariable,Zone List Multiplier,EAST ZONE
+InternalVariable,Zone Floor Area,WEST PLENUM
+InternalVariable,Zone Air Volume,WEST PLENUM
+InternalVariable,Zone Multiplier,WEST PLENUM
+InternalVariable,Zone List Multiplier,WEST PLENUM
+InternalVariable,Zone Floor Area,EAST PLENUM
+InternalVariable,Zone Air Volume,EAST PLENUM
+InternalVariable,Zone Multiplier,EAST PLENUM
+InternalVariable,Zone List Multiplier,EAST PLENUM
+InternalVariable,Final Zone Design Heating Air Mass Flow Rate,WEST ZONE
+InternalVariable,Intermediate Zone Design Heating Air Mass Flow Rate,WEST ZONE
+InternalVariable,Final Zone Design Cooling Air Mass Flow Rate,WEST ZONE
+InternalVariable,Intermediate Zone Design Cooling Air Mass Flow Rate,WEST ZONE
+InternalVariable,Final Zone Design Heating Load,WEST ZONE
+InternalVariable,Intermediate Zone Design Heating Load,WEST ZONE
+InternalVariable,Final Zone Design Cooling Load,WEST ZONE
+InternalVariable,Intermediate Zone Design Cooling Load,WEST ZONE
+InternalVariable,Final Zone Design Heating Air Density,WEST ZONE
+InternalVariable,Intermediate Zone Design Heating Air Density,WEST ZONE
+InternalVariable,Final Zone Design Cooling Air Density,WEST ZONE
+InternalVariable,Intermediate Zone Design Cooling Air Density,WEST ZONE
+InternalVariable,Final Zone Design Heating Volume Flow,WEST ZONE
+InternalVariable,Intermediate Zone Design Heating Volume Flow,WEST ZONE
+InternalVariable,Final Zone Design Cooling Volume Flow,WEST ZONE
+InternalVariable,Intermediate Zone Design Cooling Volume Flow,WEST ZONE
+InternalVariable,Zone Outdoor Air Design Volume Flow Rate,WEST ZONE
+InternalVariable,Final Zone Design Heating Air Mass Flow Rate,EAST ZONE
+InternalVariable,Intermediate Zone Design Heating Air Mass Flow Rate,EAST ZONE
+InternalVariable,Final Zone Design Cooling Air Mass Flow Rate,EAST ZONE
+InternalVariable,Intermediate Zone Design Cooling Air Mass Flow Rate,EAST ZONE
+InternalVariable,Final Zone Design Heating Load,EAST ZONE
+InternalVariable,Intermediate Zone Design Heating Load,EAST ZONE
+InternalVariable,Final Zone Design Cooling Load,EAST ZONE
+InternalVariable,Intermediate Zone Design Cooling Load,EAST ZONE
+InternalVariable,Final Zone Design Heating Air Density,EAST ZONE
+InternalVariable,Intermediate Zone Design Heating Air Density,EAST ZONE
+InternalVariable,Final Zone Design Cooling Air Density,EAST ZONE
+InternalVariable,Intermediate Zone Design Cooling Air Density,EAST ZONE
+InternalVariable,Final Zone Design Heating Volume Flow,EAST ZONE
+InternalVariable,Intermediate Zone Design Heating Volume Flow,EAST ZONE
+InternalVariable,Final Zone Design Cooling Volume Flow,EAST ZONE
+InternalVariable,Intermediate Zone Design Cooling Volume Flow,EAST ZONE
+InternalVariable,Zone Outdoor Air Design Volume Flow Rate,EAST ZONE
+**PLUGIN_GLOBAL_VARIABLES**
+**TRENDS**
+**METERS**
+OutputMeter,Electricity:Facility
+OutputMeter,Electricity:Building
+OutputMeter,Electricity:Zone:WEST ZONE
+OutputMeter,Electricity:SpaceType:GENERAL
+OutputMeter,InteriorLights:Electricity
+OutputMeter,InteriorLights:Electricity:Zone:WEST ZONE
+OutputMeter,InteriorLights:Electricity:SpaceType:GENERAL
+OutputMeter,GeneralLights:InteriorLights:Electricity
+OutputMeter,GeneralLights:InteriorLights:Electricity:Zone:WEST ZONE
+OutputMeter,GeneralLights:InteriorLights:Electricity:SpaceType:GENERAL
+OutputMeter,Electricity:Zone:EAST ZONE
+OutputMeter,InteriorLights:Electricity:Zone:EAST ZONE
+OutputMeter,GeneralLights:InteriorLights:Electricity:Zone:EAST ZONE
+OutputMeter,InteriorEquipment:Electricity
+OutputMeter,InteriorEquipment:Electricity:Zone:WEST ZONE
+OutputMeter,InteriorEquipment:Electricity:SpaceType:GENERAL
+OutputMeter,MiscPlug:InteriorEquipment:Electricity
+OutputMeter,MiscPlug:InteriorEquipment:Electricity:Zone:WEST ZONE
+OutputMeter,MiscPlug:InteriorEquipment:Electricity:SpaceType:GENERAL
+OutputMeter,InteriorEquipment:Electricity:Zone:EAST ZONE
+OutputMeter,MiscPlug:InteriorEquipment:Electricity:Zone:EAST ZONE
+OutputMeter,ITE-CPU:InteriorEquipment:Electricity
+OutputMeter,ITE-CPU:InteriorEquipment:Electricity:Zone:WEST ZONE
+OutputMeter,ITE-CPU:InteriorEquipment:Electricity:SpaceType:GENERAL
+OutputMeter,ITE-Fans:InteriorEquipment:Electricity
+OutputMeter,ITE-Fans:InteriorEquipment:Electricity:Zone:WEST ZONE
+OutputMeter,ITE-Fans:InteriorEquipment:Electricity:SpaceType:GENERAL
+OutputMeter,ITE-UPS:InteriorEquipment:Electricity
+OutputMeter,ITE-UPS:InteriorEquipment:Electricity:Zone:WEST ZONE
+OutputMeter,ITE-UPS:InteriorEquipment:Electricity:SpaceType:GENERAL
+OutputMeter,ITE-CPU:InteriorEquipment:Electricity:Zone:EAST ZONE
+OutputMeter,ITE-Fans:InteriorEquipment:Electricity:Zone:EAST ZONE
+OutputMeter,ITE-UPS:InteriorEquipment:Electricity:Zone:EAST ZONE
+OutputMeter,EnergyTransfer:Facility
+OutputMeter,EnergyTransfer:Building
+OutputMeter,EnergyTransfer:Zone:WEST ZONE
+OutputMeter,Heating:EnergyTransfer
+OutputMeter,Heating:EnergyTransfer:Zone:WEST ZONE
+OutputMeter,General:Heating:EnergyTransfer
+OutputMeter,General:Heating:EnergyTransfer:Zone:WEST ZONE
+OutputMeter,Cooling:EnergyTransfer
+OutputMeter,Cooling:EnergyTransfer:Zone:WEST ZONE
+OutputMeter,General:Cooling:EnergyTransfer
+OutputMeter,General:Cooling:EnergyTransfer:Zone:WEST ZONE
+OutputMeter,EnergyTransfer:Zone:EAST ZONE
+OutputMeter,Heating:EnergyTransfer:Zone:EAST ZONE
+OutputMeter,General:Heating:EnergyTransfer:Zone:EAST ZONE
+OutputMeter,Cooling:EnergyTransfer:Zone:EAST ZONE
+OutputMeter,General:Cooling:EnergyTransfer:Zone:EAST ZONE
+OutputMeter,EnergyTransfer:Zone:WEST PLENUM
+OutputMeter,Heating:EnergyTransfer:Zone:WEST PLENUM
+OutputMeter,General:Heating:EnergyTransfer:Zone:WEST PLENUM
+OutputMeter,Cooling:EnergyTransfer:Zone:WEST PLENUM
+OutputMeter,General:Cooling:EnergyTransfer:Zone:WEST PLENUM
+OutputMeter,EnergyTransfer:Zone:EAST PLENUM
+OutputMeter,Heating:EnergyTransfer:Zone:EAST PLENUM
+OutputMeter,General:Heating:EnergyTransfer:Zone:EAST PLENUM
+OutputMeter,Cooling:EnergyTransfer:Zone:EAST PLENUM
+OutputMeter,General:Cooling:EnergyTransfer:Zone:EAST PLENUM
+OutputMeter,ElectricityPurchased:Facility
+OutputMeter,ElectricityPurchased:Plant
+OutputMeter,Cogeneration:ElectricityPurchased
+OutputMeter,General:Cogeneration:ElectricityPurchased
+OutputMeter,ElectricitySurplusSold:Facility
+OutputMeter,ElectricitySurplusSold:Plant
+OutputMeter,Cogeneration:ElectricitySurplusSold
+OutputMeter,General:Cogeneration:ElectricitySurplusSold
+OutputMeter,ElectricityNet:Facility
+OutputMeter,ElectricityNet:Plant
+OutputMeter,Cogeneration:ElectricityNet
+OutputMeter,General:Cogeneration:ElectricityNet
+**VARIABLES**
+OutputVariable,Site Outdoor Air Drybulb Temperature,ENVIRONMENT
+OutputVariable,Lights Electricity Energy,WEST ZONE LIGHTS
+OutputVariable,Lights Electricity Energy,EAST ZONE LIGHTS
+OutputVariable,Electric Equipment Electricity Energy,WEST ZONE_MISCPLUG_EQUIP
+OutputVariable,Electric Equipment Electricity Energy,EAST ZONE_MISCPLUG_EQUIP
+OutputVariable,ITE CPU Electricity Rate,WESTDATACENTER_EQUIP
+OutputVariable,ITE Fan Electricity Rate,WESTDATACENTER_EQUIP
+OutputVariable,ITE UPS Electricity Rate,WESTDATACENTER_EQUIP
+OutputVariable,ITE CPU Electricity Rate at Design Inlet Conditions,WESTDATACENTER_EQUIP
+OutputVariable,ITE Fan Electricity Rate at Design Inlet Conditions,WESTDATACENTER_EQUIP
+OutputVariable,ITE UPS Heat Gain to Zone Rate,WESTDATACENTER_EQUIP
+OutputVariable,ITE Total Heat Gain to Zone Rate,WESTDATACENTER_EQUIP
+OutputVariable,ITE CPU Electricity Energy,WESTDATACENTER_EQUIP
+OutputVariable,ITE Fan Electricity Energy,WESTDATACENTER_EQUIP
+OutputVariable,ITE UPS Electricity Energy,WESTDATACENTER_EQUIP
+OutputVariable,ITE Standard Density Air Volume Flow Rate,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Outlet Dry-Bulb Temperature,WESTDATACENTER_EQUIP
+OutputVariable,ITE Supply Heat Index,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Operating Range Exceeded Time,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature Above Operating Range Time,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature Below Operating Range Time,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature Above Operating Range Time,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature Below Operating Range Time,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity Above Operating Range Time,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity Below Operating Range Time,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature Difference Above Operating Range,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature Difference Below Operating Range,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature Difference Above Operating Range,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature Difference Below Operating Range,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity Difference Above Operating Range,WESTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity Difference Below Operating Range,WESTDATACENTER_EQUIP
+OutputVariable,ITE CPU Electricity Rate,EASTDATACENTER_EQUIP
+OutputVariable,ITE Fan Electricity Rate,EASTDATACENTER_EQUIP
+OutputVariable,ITE UPS Electricity Rate,EASTDATACENTER_EQUIP
+OutputVariable,ITE CPU Electricity Rate at Design Inlet Conditions,EASTDATACENTER_EQUIP
+OutputVariable,ITE Fan Electricity Rate at Design Inlet Conditions,EASTDATACENTER_EQUIP
+OutputVariable,ITE UPS Heat Gain to Zone Rate,EASTDATACENTER_EQUIP
+OutputVariable,ITE Total Heat Gain to Zone Rate,EASTDATACENTER_EQUIP
+OutputVariable,ITE CPU Electricity Energy,EASTDATACENTER_EQUIP
+OutputVariable,ITE Fan Electricity Energy,EASTDATACENTER_EQUIP
+OutputVariable,ITE UPS Electricity Energy,EASTDATACENTER_EQUIP
+OutputVariable,ITE Standard Density Air Volume Flow Rate,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Outlet Dry-Bulb Temperature,EASTDATACENTER_EQUIP
+OutputVariable,ITE Supply Heat Index,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Operating Range Exceeded Time,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature Above Operating Range Time,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature Below Operating Range Time,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature Above Operating Range Time,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature Below Operating Range Time,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity Above Operating Range Time,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity Below Operating Range Time,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature Difference Above Operating Range,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dry-Bulb Temperature Difference Below Operating Range,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature Difference Above Operating Range,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Dewpoint Temperature Difference Below Operating Range,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity Difference Above Operating Range,EASTDATACENTER_EQUIP
+OutputVariable,ITE Air Inlet Relative Humidity Difference Below Operating Range,EASTDATACENTER_EQUIP
+OutputVariable,Zone ITE CPU Electricity Rate,WEST ZONE
+OutputVariable,Zone ITE Fan Electricity Rate,WEST ZONE
+OutputVariable,Zone ITE UPS Electricity Rate,WEST ZONE
+OutputVariable,Zone ITE CPU Electricity Rate at Design Inlet Conditions,WEST ZONE
+OutputVariable,Zone ITE Fan Electricity Rate at Design Inlet Conditions,WEST ZONE
+OutputVariable,Zone ITE UPS Heat Gain to Zone Rate,WEST ZONE
+OutputVariable,Zone ITE Total Heat Gain to Zone Rate,WEST ZONE
+OutputVariable,Zone ITE CPU Electricity Rate,EAST ZONE
+OutputVariable,Zone ITE Fan Electricity Rate,EAST ZONE
+OutputVariable,Zone ITE UPS Electricity Rate,EAST ZONE
+OutputVariable,Zone ITE CPU Electricity Rate at Design Inlet Conditions,EAST ZONE
+OutputVariable,Zone ITE Fan Electricity Rate at Design Inlet Conditions,EAST ZONE
+OutputVariable,Zone ITE UPS Heat Gain to Zone Rate,EAST ZONE
+OutputVariable,Zone ITE Total Heat Gain to Zone Rate,EAST ZONE
+OutputVariable,Power Utilization Effectiveness,EMS
+OutputVariable,Zone Air Temperature,WEST ZONE
+OutputVariable,Zone Air Relative Humidity,WEST ZONE
+OutputVariable,Zone Air System Sensible Heating Energy,WEST ZONE
+OutputVariable,Zone Air System Sensible Cooling Energy,WEST ZONE
+OutputVariable,Zone Air Temperature,EAST ZONE
+OutputVariable,Zone Air Relative Humidity,EAST ZONE
+OutputVariable,Zone Air System Sensible Heating Energy,EAST ZONE
+OutputVariable,Zone Air System Sensible Cooling Energy,EAST ZONE
+OutputVariable,Zone Air System Sensible Heating Energy,WEST PLENUM
+OutputVariable,Zone Air System Sensible Cooling Energy,WEST PLENUM
+OutputVariable,Zone Air System Sensible Heating Energy,EAST PLENUM
+OutputVariable,Zone Air System Sensible Cooling Energy,EAST PLENUM
+OutputVariable,Facility Total Purchased Electricity Energy,WHOLE BUILDING
+OutputVariable,Facility Total Surplus Electricity Energy,WHOLE BUILDING
+OutputVariable,Facility Net Purchased Electricity Energy,WHOLE BUILDING
+OutputVariable,Facility Total Building Electricity Demand Rate,WHOLE BUILDING
+OutputVariable,Facility Total HVAC Electricity Demand Rate,WHOLE BUILDING
+OutputVariable,Facility Total Electricity Demand Rate,WHOLE BUILDING
+""
