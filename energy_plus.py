@@ -47,8 +47,8 @@ class EnergyPlusController:
             # supply air temperature setpoint (°C)
             "heating_setpoint": ("Zone Temperature Control","Heating Setpoint","WEST ZONE" ),
             "cooling_setpoint": ("Zone Temperature Control","Cooling Setpoint","WEST ZONE" ),
-            
-
+            "number_of_people": ("People","Number of People","WEST ZONE PEOPLE" ),
+        
         }
         self.actuator_handles: Dict[str, int] = {}
     """
@@ -167,7 +167,12 @@ class EnergyPlusController:
                 key: self.data_exchange.get_variable_value(self.state, handle)
                 for key, handle
                 in self.var_handles.items()
-            }
+            },
+            ##Also add current datetime.
+            "year": self.data_exchange.year(self.state),
+            "month": self.data_exchange.month(self.state),
+            "day": self.data_exchange.day_of_month(self.state),
+            "hour": self.data_exchange.hour(self.state),
         }
         #print(self.next_output)
         self.output_queue.put(self.next_output)
@@ -185,16 +190,47 @@ class EnergyPlusController:
         #if it is lower than 23 degrees, turn on the low temp actuator
         if self.next_output is None:
             return
-        self.data_exchange.set_actuator_value(
+        
+        #If day is monday, there are 2 people. If wednesday there are 4 people. Otherwise 0.
+        sun_is_up = self.data_exchange.sun_is_up(self.state)
+        
+        if sun_is_up:
+            self.data_exchange.set_actuator_value(
                 state=self.state,
-                actuator_handle=self.actuator_handles["heating_setpoint"],
-                actuator_value=18.0
+                actuator_handle=self.actuator_handles["number_of_people"],
+                actuator_value=1.0
             )
-        self.data_exchange.set_actuator_value(
+        else:
+            self.data_exchange.set_actuator_value(
                 state=self.state,
-                actuator_handle=self.actuator_handles["cooling_setpoint"],
-                actuator_value=27.0
+                actuator_handle=self.actuator_handles["number_of_people"],
+                actuator_value=0.0
             )
+        # if there are people in the room, set the heating setpoint to 20 and the cooling setpoint to 23
+        if self.data_exchange.get_actuator_value(self.state,
+                self.actuator_handles["number_of_people"]) == 1.0:
+            
+            self.data_exchange.set_actuator_value(
+                    state=self.state,
+                    actuator_handle=self.actuator_handles["heating_setpoint"],
+                    actuator_value=20.0
+                )
+            self.data_exchange.set_actuator_value(
+                    state=self.state,
+                    actuator_handle=self.actuator_handles["cooling_setpoint"],
+                    actuator_value=23.0
+                )
+        else:
+            self.data_exchange.set_actuator_value(
+                    state=self.state,
+                    actuator_handle=self.actuator_handles["heating_setpoint"],
+                    actuator_value=20.0
+                )
+            self.data_exchange.set_actuator_value(
+                    state=self.state,
+                    actuator_handle=self.actuator_handles["cooling_setpoint"],
+                    actuator_value=30.0
+                )
         if self.next_output["zone_mean_temp"] > 27:
             # print(self.data_exchange.get_actuator_value(state=self.state,
             #     actuator_handle=self.actuator_handles["set_point"]))
